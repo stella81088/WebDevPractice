@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Calling JSON FILE</title>
+    </head>
+
+    <body>
+        <h1>Fetching JSON file</h1>
+
+        <script>
+            //get json file, then will do function that will turn json into javascript object
+            fetch ('test.json').then(function(response){
+                return response.json();
+            }).then(function(obj){  //get the javascript obj and print it out
+                console.log(obj);
+            }).catch(function(error){ 
+                console.error('something went wrong with retrieving the people');
+                console.error(error); //get actual error code
+            })
+        </script>
+    </body>
+</html>
